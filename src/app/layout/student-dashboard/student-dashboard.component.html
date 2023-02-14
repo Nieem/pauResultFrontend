@@ -1,0 +1,208 @@
+<div>
+  <h2 class="text-muted">Dashboard <small>Statistics Overview</small></h2>
+  <!-- <div class="row">
+      <div class="col-md-12">
+          <ngb-carousel>
+              <ng-template ngbSlide *ngFor="let slider of sliders">
+                  <img class="img-fluid mx-auto d-block" [src]="slider.imagePath" alt="Random first slide" width="100%">
+                  <div class="carousel-caption">
+                      <h3>{{slider.label}}</h3>
+                      <p>{{slider.text}}</p>
+                  </div>
+              </ng-template>
+          </ngb-carousel>
+      </div>
+  </div> -->
+<!-- <p>{{test}}</p> -->
+
+  <mat-card class="col-sm-12 col-md-6 col-md-offset-3 example-main-card">
+      <mat-card-header>
+          <h3>Welcome to Primeasia University</h3>
+      </mat-card-header>
+      <mat-card-content>
+          <div class="row">
+              <div class="col-sm-4 pull-left">
+                <ul *ngFor='let student of this.studentService.studentdashBoardData'>
+                  <img src={{student.StudentPicture}} class="img-thumbnail" alt="Cinque Terre" width="150" height="136"> 
+               </ul>
+              </div>
+                
+              <div class="col-sm-8 text-left"> 
+                   <ul *ngFor='let student of this.studentService.studentdashBoardData'>                                       
+                       <h3> {{student.StudentName}}</h3> 
+                       <h5>{{student.StudentId}}</h5>
+                       <h5>{{student.DepartmentName}}</h5>                     
+                  </ul>
+              </div>
+          </div>    
+      </mat-card-content>
+  </mat-card> 
+
+  <hr>
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-6" >
+          <div class="card card-stats" style="background-color: rgb(89, 223, 167)">
+              <div class="card-body ">
+                  <div class="row">
+                      <div class="col-5 col-md-4">
+                          <div class="icon-big3 text-center icon-warning">
+                              <i class="material-icons">view_list</i> 
+                          </div>
+                      </div>
+
+                      <div class="col-7 col-md-8">
+                              <div class="numbers">
+                           <ul *ngFor='let student of this.studentService.studentdashBoardData'>
+                              <p class="card-category shadow-text-effect-5">Credit</p>
+                              <p class="card-title">Earned Credit({{student.EarnCredit}})
+                              </p>
+                              
+                          </ul>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+              
+              <div class="card-footer ">
+                  <hr>
+                  <div class="stats">
+                  <i class="fa fas fa-archive"></i> Sections details
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="card card-stats" style="background-color: rgb(235, 97, 253)">
+              <div class="card-body ">
+                  <div class="row">
+                      <div class="col-5 col-md-4">
+                          <div class="icon-big2 text-center icon-warning">
+                              <i class="material-icons">
+                                  add_to_queue
+                                  </i>
+                          </div>
+                      </div>
+                      <div class="col-7 col-md-8">
+                          <div class="numbers">
+                          <ul *ngFor='let student of this.studentService.studentdashBoardData'>
+                              <p class="card-category shadow-text-effect-5">Course</p>
+                              <p class="card-title">Course Complete({{student.CourseComplete}})
+                             </p>
+                                  
+                              
+                          </ul>
+
+                         </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card-footer ">
+                  <hr>
+                  <div class="stats">
+                  <i class="fa fas fa-file"></i> Marks Upload
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="card card-stats" style="background-color: rgb(202, 211, 73)">
+              <div class="card-body ">
+                  <div class="row">
+                      <div class="col-5 col-md-4">
+                          <div class="icon-big1 text-center icon-warning">
+                              <i class="material-icons">
+                                  group
+                                  </i>
+                          </div>
+                      </div>
+                      <div class="col-7 col-md-8">
+                          <div class="numbers">
+                                <ul *ngFor='let student of this.studentService.studentdashBoardData'>
+                                        <p class="card-category shadow-text-effect-5">CGPA</p>
+                                        <p class="card-title">CGPA({{student.CGPA}})</p>
+                                            
+                                       
+                             </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          <div class="card-footer ">
+              <hr>
+              <div class="stats">
+              <i class="fa fas fa-clipboard"></i> Enrolled Students
+              </div>
+          </div>
+          </div>
+      </div>
+
+  </div>
+
+
+        <hr />
+        <div class="clearfix"></div>
+
+       <div class="col-sm-12 notification-block">
+           <h3 class="text-center"> Notifications</h3>
+           <table>
+               <tbody  *ngFor='let teacher of this.studentService.dashBoardData' >
+                 <tr *ngFor='let noti of teacher.DashboardNotifications'>
+                     <td><ngb-alert  [dismissible]="false"  (close)="closeAlert(alert)" >{{noti.description}}</ngb-alert></td>
+                 </tr>
+               </tbody>
+           </table>
+          
+       </div> 
+      
+            <hr /> 
+
+
+
+        <!-- <div class="row">
+              <div class="col col-sm-6">
+                  <div class="card mb-3">
+                      <div class="card-header">
+                          Bar Chart
+                      </div>
+                      <div class="card-body">
+                          <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                          </canvas>
+                      </div>
+                     
+                  </div>
+              </div>
+              <div class="col col-sm-6">
+                      <div class="card mb-3">
+                          <div class="card-header">
+                              Line Chart
+                          </div>
+                          <div class="card-body">
+                              <canvas baseChart height="130" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                              </canvas>
+                          </div>
+                      </div>
+                  </div>
+          </div> -->
+
+
+
+  
+
+  

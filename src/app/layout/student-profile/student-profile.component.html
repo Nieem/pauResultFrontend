@@ -1,0 +1,755 @@
+<!-- <div [@routerTransition]>
+    <app-page-header [heading]="'Forms'" [icon]="'fa-edit'"></app-page-header>
+
+    <div class="row">
+        <div class="col-lg-6">
+
+            <form role="form">
+                <fieldset class="form-group">
+                    <label>Text Input</label>
+                    <input class="form-control">
+                    <p class="help-block">Example block-level help text here.</p>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label>Text Input with Placeholder</label>
+                    <input class="form-control" placeholder="Enter text">
+                </fieldset>
+
+                <div class="form-group">
+                    <label>Static Control</label>
+                    <p class="form-control-static">email@example.com</p>
+                </div>
+
+                <fieldset class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input type="file" class="form-control-file" id="exampleInputFile">
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label>Text area</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                </fieldset>
+
+                <div class="form-group">
+                    <label>Checkboxes</label>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value=""> Checkbox 1
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value=""> Checkbox 2
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value=""> Checkbox 3
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Inline Checkboxes</label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox">1
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox">2
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox">3
+                    </label>
+                </div>
+
+                <fieldset class="form-group">
+                    <label>Radio Buttons</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Radio 1
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Radio 2
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"> Radio 3
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label>Inline Radio Buttons</label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked="">1
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2">2
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3">3
+                    </label>
+                </fieldset>
+
+                <div class="form-group">
+                    <label>Selects</label>
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+
+                <fieldset class="form-group">
+                    <label>Multiple Selects</label>
+                    <select multiple="" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </fieldset>
+
+                <button type="submit" class="btn btn-secondary">Submit Button</button>
+                <button type="reset" class="btn btn-secondary">Reset Button</button>
+
+            </form>
+
+        </div>
+        <div class="col-lg-6">
+            <h4>Disabled Form States</h4>
+
+            <form role="form">
+
+                <fieldset disabled="">
+
+                    <div class="form-group">
+                        <label for="disabledSelect">Disabled input</label>
+                        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input" disabled="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="disabledSelect">Disabled select menu</label>
+                        <select id="disabledSelect" class="form-control">
+                            <option>Disabled select</option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Disabled Checkbox
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Disabled Button</button>
+
+                </fieldset>
+
+            </form>
+            <br>
+
+            <h4>Form Validation</h4>
+
+            <form role="form">
+
+                <div class="form-group has-success">
+                    <label class="form-control-label" for="inputSuccess">Input with success</label>
+                    <input type="text" class="form-control form-control-success" id="inputSuccess">
+                </div>
+
+                <div class="form-group has-warning">
+                    <label class="form-control-label" for="inputWarning">Input with warning</label>
+                    <input type="text" class="form-control form-control-warning" id="inputWarning">
+                </div>
+
+                <div class="form-group has-danger">
+                    <label class="form-control-label" for="inputError">Input with danger</label>
+                    <input type="text" class="form-control form-control-danger" id="inputError">
+                </div>
+
+            </form>
+
+            <h4>Input Groups</h4>
+
+            <form role="form">
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <!-- <span class="input-group-addon">@</span> -->
+                    <!-- <input type="text" class="form-control" placeholder="Username">
+                </div>
+
+                <div class="form-group input-group">
+                    <input type="text" class="form-control">
+                    <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                </div>
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-eur"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Font Awesome Icon">
+                </div>
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">$</span>
+                    </div>
+                    <input type="text" class="form-control">
+                    <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                </div>
+
+                <div class="form-group input-group">
+                    <input type="text" class="form-control">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+
+            </form>
+
+            <p>For complete documentation, please visit <a target="_blank" href="http://v4-alpha.getbootstrap.com/components/forms/">Bootstrap's Form Documentation</a>.</p>
+
+        </div>
+    </div>
+    <!-- /.row -->
+<!-- </div> -->
+<h1></h1>
+<div class="row">
+    <div class="col-sm-2 pull-left">
+             
+            <h2>Profile</h2>
+                   <br/>
+             <!-- <ul *ngFor="let teacher of profileService.profiledataList">          
+            <img src={{teacher.Pic}} class="img-thumbnail" alt="Cinque Terre" width="150" height="136"> 
+            </ul> -->
+          
+        
+    </div>
+    <div class="col-sm-6">
+      <br/><br/><br/>
+    <!-- <ul *ngFor="let teacher of profileService.profiledataList"> 
+       <label class="text text-primary">{{teacher.Name}}</label><br/>
+       <label class="text text-primary">{{teacher.Designation}}</label><br/>
+       <label class="text text-primary">Dept of {{teacher.DepartmentSection}}</label>
+    </ul> -->
+    </div>
+</div>
+
+<br/>
+<mat-tab-group>
+    <mat-tab label="Academic"> 
+          <br>
+           <h4> <b>Academic Information</b> </h4>
+
+            <table id="example" class="table table-striped datatable table-bordered ">  
+                   
+               
+                    <thead>
+                           <tr>
+                               <th>Name of Examination</th>
+                               <th> Board/University</th>
+                               <th>Subject Studied</th>                              
+                               <th>Session</th>
+                               <th>Result</th>
+                               <th>Passing Year</th>
+                               
+                           </tr>
+                       </thead>
+                 <tbody *ngFor="let studentdata of studentService.studentdashBoardData">
+                   <tr *ngFor="let academic of studentdata.StudentAcademicData" >
+                    
+                     <td >
+                         {{academic.NameOfExamination}}
+                     </td>
+                     <td>
+                        {{academic.UniversityBoard}}
+                    </td>
+                     <td>
+                         {{academic.Group}}
+                     </td>
+                     
+                    <td>
+                        {{academic.StartingSession}}
+                    </td>
+                    <td >
+                     {{academic.Result}}
+                    </td>
+                    <td>
+                        {{academic.PassingYear}}
+                    </td>
+                     
+                    </tr>
+
+                 </tbody>
+               
+               
+                 <tfoot>
+                      
+                   </tfoot>
+                 </table>
+
+
+
+    </mat-tab>
+ <mat-tab label="Personal"> 
+    <!-- <ul *ngFor="let studentdata of studentService.studentdashBoardData"> 
+       <label class="text text-primary">{{teacher.Name}}</label><br/>
+       <label class="text text-primary">{{teacher.Designation}}</label><br/>
+       <label class="text text-primary">Dept of {{teacher.DepartmentSection}}</label>
+    </ul> -->
+    <div class="panel panel-primary" style="padding:25px">
+        <div class="panel-heading" style="color:blue">
+            <h4>
+                <span class="fa-stack">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i style="color: #1d70b7" class="fa fa-user fa-stack-1x fa-inverse"></i>
+                </span>
+                <b> Personal Information</b>
+            </h4>
+        </div>
+        <div class="panel-body" style="padding:45px;border: 1px solid rgb(24, 77, 221)">
+            <table class="table table-hover" style="font-size: 13px">
+                <tbody *ngFor="let studentdata of studentService.studentdashBoardData">
+                 <tr>
+                    <td class="text-right" style="font-weight: bold">Father's Name :</td>
+                    <td>{{studentdata.FathersName}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Mother's Name :</td>
+                    <td>{{studentdata.MothersName}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Blood Group :</td>
+                    <td>{{studentdata.BloodGroupsId}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Present Address :</td>
+                    <td>{{studentdata.PresentAddress}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Permanent Address :</td>
+                    <td>{{studentdata.ParmanentAddress}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Phone No :</td>
+                    <td>{{studentdata.PhoneNo}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Email :</td>
+                    <td>{{studentdata.EmailAddress}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Date of birth :</td>
+                    <td>{{studentdata.DateOfBirth}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Marital Status :</td>
+                    <td>{{studentdata.MaritalStatusId}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Gender :</td>
+                    <td>{{studentdata.GenderId}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Nationality :</td>
+                    <td>{{studentdata.Nationality}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Skills in other field :</td>
+                    <td>{{studentdata.SkillInOtherfield}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Local guardian :</td>
+                    <td>{{studentdata.LocalGuardianName}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Relation with local Guardian :</td>
+                    <td>{{studentdata.LocalGuardianRelationship}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Local Guardian's address :</td>
+                    <td>{{studentdata.LocalGuardianAddress}}</td>
+                </tr>
+                <tr>
+                    <td class="text-right" style="font-weight: bold">Local Guardian's contact no :</td>
+                    <td>{{studentdata.LocalGuardianContact}}</td>
+                </tr>
+            </tbody></table>
+        </div>
+
+    </div>
+
+
+    </mat-tab>
+   <mat-tab label="Documents"> 
+
+    <!-- <div class="checkbox">
+        <input type="checkbox" value="1" id="checkbox1" />
+        <label for="checkbox1"></label>
+     </div> -->
+
+
+        <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4>
+                        <span class="fa-stack">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i style="color: #1d70b7" class="fa fa-paperclip fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <b> Document Attatched</b>
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        <table class="table table-condensed " style="font-size: 13px;font-weight: bold">
+                                <tbody *ngFor="let studentdata of studentService.studentdashBoardData">
+                                 <tr *ngFor="let academic of studentdata.StudentDocuments"  >
+                                    <td><input type="checkbox" [checked]=academic.SscCertificate value={{academic.SscCertificate}} id="checkbox1" class="checkbox" ><label for="checkbox1"></label><span></span></td>
+                                    
+                                    <td>SSC Certificate</td>
+                                    <td></td>
+                                    <td><input type="checkbox"><span></span></td>
+                                    <td>Diploma Mark Sheet</td>
+                                </tr>
+                                <tr *ngFor="let academic of studentdata.StudentDocuments">
+                                    <td class="checkbox" ><input type="checkbox" [checked]=academic.SscMarkSheet  value={{academic.SscMarkSheet}} ><label for="checkbox1"></label><span></span></td>
+                                    
+                                    <td>SSC Mark Sheet</td>
+                                    <td></td>
+                                    <td><input type="checkbox"><span></span></td>
+                                    <td>O level</td>
+                                </tr>
+                                <tr *ngFor="let academic of studentdata.StudentDocuments">
+                                    <td><input type="checkbox" [checked]=academic.HscCertificate value={{academic.HscCertificate}} ><span></span></td>
+                                    
+                                    <td>HSC Certificate</td>
+                                    <td></td>
+                                    <td><input type="checkbox"><span></span></td>
+                                    <td>A level</td>
+                                </tr>
+                                <tr *ngFor="let academic of studentdata.StudentDocuments">
+                                    <td><input type="checkbox" [checked]=academic.HscMarkSheet><span></span></td>
+                                    <td>HSC Mark Sheet</td>
+                                    <td></td>
+                                    <td><input type="checkbox" [checked]=academic.BaBsCertificate><span></span></td>
+                                    <td>BA/BS Certificate</td>
+                                </tr>
+                                <tr *ngFor="let academic of studentdata.StudentDocuments">
+                                    <td><input type="checkbox" [checked]=academic.SscTestimonial><span></span></td>
+                                    <td>SSC Testimonial</td>
+                                    <td></td>
+                                    <td><input type="checkbox" [checked]=academic.BaBsMarkSheet><span></span></td>
+                                    <td>BA/BS Mark Sheet</td>
+                                </tr>
+                                <tr *ngFor="let academic of studentdata.StudentDocuments">
+                                    <td><input type="checkbox" [checked]=academic.HscTestimonial><span></span></td>
+                                    <td>HSC Testimonial</td>
+                                    <td></td>
+                                    <td><input type="checkbox" [checked]=academic.TwoLettersofRecommendation><span></span></td>
+                                    <td>Two Letters of Recommendation</td>
+                                </tr>
+                                <tr *ngFor="let academic of studentdata.StudentDocuments">
+                                    <td><input type="checkbox" [checked]=academic.DiplomaCertificate><span></span></td>
+                                    <td>Diploma Certificate</td>
+                                    <td></td>
+                                    <td><input type="checkbox" checked="checked" [checked]=academic.TwoStampSizePhotoGraph><span></span></td>
+                                    <td>5 Stamp Size PhotoGraph</td>
+                                </tr>
+                            </tbody></table>
+                          </div>
+                </div>
+            </div>
+
+            <!-- <table id="example" class="table table-striped datatable table-bordered ">  
+                   
+               
+                    <thead>
+                           <tr>
+                               <th>Project Title</th>
+                               <th>Short Description</th>
+                               <th>Completed Date</th>
+                               
+                           </tr>
+                       </thead>
+                 <tbody *ngFor="let employee of profileService.profiledataList">
+                   <tr *ngFor="let employee1 of employee.ProfileProject" >
+                     
+                     <td >
+                         {{employee1.ProjectTitle}}
+                     </td>
+                     <td>
+                         {{employee1.ShortDescription}}
+                    </td>
+                    <td >
+                     {{employee1.ProjectCompletedDate}}
+                    </td>
+
+                    
+                    </tr>
+
+                 </tbody>
+               
+               
+                 <tfoot>
+                      
+                   </tfoot>
+                 </table> -->
+
+
+    </mat-tab>
+
+    <mat-tab label="CourseList By Curriculum"> CourseList By Curriculum 
+       
+             <div *ngFor="let academic  of this.studentService.courseListBycurriculam" style="padding:3%">
+            
+            <h3>{{academic.SerializedSemesterName}}</h3> 
+       <table id="example" class="table table-bordered "   >  
+       <thead class="thead-light">
+            <tr>
+                <th>Course Code</th>
+                <th> Course Name</th>
+                <th>Prerequisit</th>
+                <th>Credits</th>
+                <th> Status</th>   
+                <th>Grade</th>           
+                <th> SemesterNYear</th>
+                
+
+                                             
+            </tr>
+        </thead>
+     <tbody >
+         <tr *ngFor="let a  of academic.studentCurriculumLists">
+        
+           <td>
+            {{a.CourseCode}}
+          </td >  
+          <td >
+            {{a.CourseName}}
+          </td >   
+          <td>
+            {{a.Prerequisit}}
+          </td >  
+          <td >
+                {{a.Credit}}
+          </td > 
+          <td>
+            {{a.Status}}
+          </td >  
+          <td >
+            {{a.Grade}}
+          </td >  
+          <td>
+                {{a.SemesterNYear}}    
+        </td >
+       
+          
+
+     </tr>
+
+
+         </tbody>
+       
+       
+         <!-- <tfoot *ngFor="let b  of academic.courseWiseResultHeaders">
+                <td >
+                      
+                </td >
+              <td>
+                 Credits Taken       
+              </td >
+              <td >
+                {{b.TotalCredits}}
+              </td > 
+              <td >
+                     
+                </td >
+                  <td>
+                          
+                  </td >
+                   <td >
+                        {{b.TotalTGP}}    
+                 </td >
+                 <td>
+                        {{b.TotalECR}}    
+                </td >
+                <td>
+                        {{b.TotalSGPA}}       
+                 </td >
+                 <td >
+                        {{b.TotalCGPA}}        
+                </td >
+                 <td>
+                    Credits Taken       
+                 </td >
+           </tfoot> -->
+         </table>  
+
+        </div>
+
+    </mat-tab> 
+
+
+    <mat-tab label="Grade By Semester">Grade By Semester
+           <!-- <div *ngFor="let studentdata of studentService.studentdashBoardData">
+            <table id="example" class="table table-striped datatable table-bordered " *ngFor="let academic of studentdata.StudentAcademicData">  
+                   
+               
+                <thead>
+                    <tr>
+                        <th>Name of Examination</th>
+                        <th> Board/University</th>
+                        <th>Subject Studied</th>                              
+                       
+                        
+                    </tr>
+                </thead>
+          <tbody>
+            <tr>
+             
+              <td >
+                  {{academic.NameOfExamination}}
+              </td>
+              <td>
+                 {{academic.PassingYear}}
+             </td>
+              <td>
+                  {{academic.Group}}
+              </td>
+              
+            
+              
+             </tr>
+
+
+                 </tbody>
+               
+               
+                 <tfoot>
+                      
+                   </tfoot>
+                 </table>
+
+
+       </div>      -->
+
+       <br/>
+
+      <div *ngFor="let academic  of this.studentService.gradebysemesterData" style="padding:3%">
+            
+            <h3 *ngFor="let b  of academic.courseWiseResultHeaders" >{{b.SemesterName}}</h3> 
+       <table id="example" class="table table-bordered "   >  
+       <thead class="thead-light">
+            <tr >
+                <th>Course Code</th>
+                <th> Course Name</th>
+                <th>Credits</th>
+                <th>Grade</th>
+                <th> GP</th>               
+                <th> TGP</th>
+                <th>ECR</th>
+                <th>SGPA</th>
+                <th> CGPA</th>               
+                <th> Status</th>
+
+                                             
+            </tr>
+        </thead>
+     <tbody >
+         <tr *ngFor="let a  of academic.CourseWiseResult">
+        
+           <td>
+            {{a.CourseCode}}
+          </td >  
+          <td >
+            {{a.CourseName}}
+          </td >   
+          <td>
+            {{a.Credits}}
+          </td >  
+          <td >
+                {{a.Grade}}
+          </td > 
+          <td>
+            {{a.GP}}
+          </td >  
+          <td >
+            {{a.TGP}}
+          </td >  
+          <td>
+                {{a.ECR}}    
+        </td >
+        <td>
+                {{a.SCGPA}}       
+         </td >
+         <td >
+                {{a.CGPA}}        
+        </td >
+         <td>
+            {{a.Status}}  
+         </td >
+          
+
+     </tr>
+
+
+         </tbody>
+       
+       
+         <tfoot *ngFor="let b  of academic.courseWiseResultHeaders" style="background-color: #d3d0d0;">
+                <td >
+                      
+                </td >
+              <td>
+                 Credits Taken       
+              </td >
+              <td >
+                {{b.TotalCredits}}
+              </td > 
+              <td >
+                     
+                </td >
+                  <td>
+                          
+                  </td >
+                   <td >
+                        {{b.TotalTGP}}    
+                 </td >
+                 <td>
+                        {{b.TotalECR}}    
+                </td >
+                <td>
+                        {{b.TotalSGPA}}       
+                 </td >
+                 <td >
+                        {{b.TotalCGPA}}        
+                </td >
+                 <td>
+                        
+                 </td >
+           </tfoot>
+         </table>  
+
+        </div>
+                  
+              
+    </mat-tab> 
+   
+  </mat-tab-group>
+
+  <!-- <div *ngFor="let key of objectKeys(items)">{{key + ' : ' + items[key ]}}</div> -->
+  

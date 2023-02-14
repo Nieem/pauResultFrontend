@@ -1,0 +1,139 @@
+
+<div class="login-page" [@routerTransition]>
+        <div class="row justify-content-md-center">
+            <div class="col-md-4 intro-form">
+                <h1>Faculty Portal (Forgot Password)</h1>
+
+                <img src="assets/images/logo.png" width="150px" class="user-avatar" />
+      
+                <form role="form"  #fpForm="ngForm">
+                    <div class="form-content">
+                        <div class="form-group">
+                                <input id="loginIdentity" name="loginIdentity" class="form-control input-underline input-lg" 
+                                required minlength="6" 
+                                [(ngModel)]="studentService.mailedUser.loginIdentity" #loginIdentity="ngModel" placeholder="Login ID">
+                
+                          <div *ngIf="loginIdentity.invalid && (loginIdentity.dirty || loginIdentity.touched)"
+                              class="alert alert-danger">
+                
+                              <div *ngIf="loginIdentity.errors.required">
+                                LoginId is required.
+                              </div>
+                              <div *ngIf="loginIdentity.errors.minlength">
+                                LoginId must be at least 6 characters long.
+                              </div>
+                
+                          </div>
+                        </div>
+    
+                        <div class="form-group">
+                                <input id="email" name="email" type="email" class="form-control input-underline input-lg" required  
+                                [(ngModel)]="studentService.mailedUser.email" #email="ngModel" placeholder="User Email">
+            
+                                  <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                                  class="alert alert-danger">
+                    
+                                <div *ngIf="email.errors.required">
+                                    Email is required.
+                                </div>
+                    
+                              </div>
+                        </div>
+                        
+                    </div>
+                    <button type="button" class="btn btn-default btn-forgot pull-right" (click)="onConfirm(fpForm)" [disabled]="fpForm.invalid" value="Send"><span>Send Email</span> <i class="material-icons">
+                            near_me
+                            </i></button>
+                    <button type="button" class="btn btn-default btn-login pull-left" [routerLink]="['/login']" value="Back"><span>Back</span> </button>
+                    <!-- <button  class="btn btn-info" (click)="onSelectCancel()">Cancel</button>        -->
+                    <!-- <button type="button" class="btn btn-default" [routerLink]="['/signup']">Forgot Password</button> -->
+    
+                    <!-- <a class="btn rounded-btn"  [routerLink]="['/dashboard']" (click)="onLoggedin()"> Log in </a>
+                    &nbsp;
+                    <a class="btn rounded-btn" [routerLink]="['/signup']">Forgot Password</a> -->
+                </form>
+      </div>
+       
+    </div>
+
+
+
+      <!-- <div class="login-page" [@routerTransition]>
+            <div class="row justify-content-md-center">
+                <div class="col-md-4">
+                    <img src="assets/images/logo.png" width="150px" class="user-avatar" />
+                    <h1>Teacher's Portal</h1>
+                    <form role="form" #studentForm="ngForm" (ngSubmit)="onSubmit(studentForm)" appIdentityRevealed>
+                        <div class="form-content">
+                            <div class="form-group">
+                                    <input id="name" name="username" class="form-control input-underline input-lg" 
+                                    required minlength="4" appForbiddenName="bob"
+                                    [(ngModel)]="studentService.selectedStudent.Roll" #name="ngModel"  placeholder="User Name">
+                    
+                              <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                                  class="alert alert-danger">
+                    
+                                <div *ngIf="name.errors.required">
+                                  Name is required.
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="form-group">
+                                <input  id="email" name="email" class="form-control input-underline input-lg" [(ngModel)]="studentService.selectedStudent.Roll" #name="ngModel"  placeholder="E-mail">
+                                    <div *ngIf="email.errors && power.touched" class="alert alert-danger">
+                                        <div *ngIf="email.errors.required">E-mail is required.</div>
+                                    </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group col-md-8">
+                                <button [disabled]="!studentForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+                                  <i class="fa fa-floppy-o"></i> Send Password</button>
+                                  <button [disabled]="!studentForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+                                    <i class="fa fa-floppy-o"></i> Log in</button>
+                                  <a class="btn rounded-btn" [routerLink]="['/login']"> Log in </a> 
+                              </div>
+                        <a class="btn rounded-btn" [routerLink]="['/dashboard']" (click)="onLoggedin()"> Log in </a>
+                        &nbsp;
+                        <a class="btn rounded-btn" [routerLink]="['/signup']">Forgot Password</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+ -->
+
+<!-- <div class="login-page" [@routerTransition]>
+    <div class="row justify-content-md-center">
+        <div class="col-md-4">
+            <img class="user-avatar" src="assets/images/logo.png" width="150px" />
+            <h1>SB Admin BS4 Angular5</h1>
+            <form role="form">
+                <div class="form-content">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="Full Name">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" class="form-control input-underline input-lg" id="" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control input-underline input-lg" id="" placeholder="Repeat Password">
+                    </div>
+                </div>
+                <a class="btn rounded-btn" [routerLink]="['/dashboard']"> Send Password </a>&nbsp;
+                <a class="btn rounded-btn" [routerLink]="['/login']">Forgot Password</a>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+
+
+ 

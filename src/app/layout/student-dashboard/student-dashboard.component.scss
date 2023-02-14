@@ -1,0 +1,189 @@
+.demo-card-event.mdl-card {
+    width: 256px;
+    height: 256px;
+    background: #3E4EB8;
+  }
+
+  .mat-card-header{
+    border-bottom: 1px solid #3a3a3a; 
+    margin-bottom: 10px;
+  }
+  .demo-card-event > .mdl-card__actions {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .demo-card-event > .mdl-card__title {
+    align-items: flex-start;
+  }
+  .demo-card-event > .mdl-card__title > h4 {
+    margin-top: 0;
+  }
+  .demo-card-event > .mdl-card__actions {
+    display: flex;
+    box-sizing:border-box;
+    align-items: center;
+  }
+  .demo-card-event > .mdl-card__actions > .material-icons {
+    padding-right: 10px;
+  }
+  .demo-card-event > .mdl-card__title,
+  .demo-card-event > .mdl-card__actions,
+  .demo-card-event > .mdl-card__actions > .mdl-button {
+    color: #fff;
+  }
+
+  .example-card {
+    max-width: 800px;
+    min-width: 300px;
+    min-height: 80px;
+    max-height: 200px;
+    background-color: rgb(240, 132, 82);
+  }
+  
+  .example-main-card {
+   
+    min-height: 200px;
+    max-height: 300px;
+    background-color: rgb(59, 103, 126)
+  }
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .notification-block{
+    background: rgb(214, 214, 214); 
+    padding-bottom: 20px;
+    -webkit-box-shadow: 1px 0px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 0px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 0px 14px 0px rgba(0,0,0,0.75);
+  }
+
+  .notification-block h3,
+  .shadow-text-effect-1{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    padding: 10px 0px;
+  }
+
+  .shadow-text-effect-2{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  }
+
+  .shadow-text-effect-3{
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  }  
+
+  .shadow-text-effect-4{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+  }
+
+  .shadow-text-effect-5{
+    color: rgb(0, 102, 255) !important;
+    text-shadow: -1px 0 rgb(216, 72, 72), 0 1px rgb(224, 19, 19), 1px 0 rgb(224, 25, 25), 0 -1px rgb(192, 13, 13);
+  }
+
+  .card {
+    border-radius: 12px;
+    -webkit-box-shadow: 1px 0px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 0px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 0px 14px 0px rgba(0,0,0,0.75);
+    background-color: #fff;
+    color: #252422;
+    margin-bottom: 20px;
+    position: relative;
+    border: 0 none;
+    transition: transform .3s cubic-bezier(.34,2,.6,1),box-shadow .2s ease;
+}
+
+.card-stats .card-body {
+  padding: 15px 15px 0;
+}
+
+.card-stats .icon-big {
+  font-size: 3em;
+  min-height: 64px;
+}
+
+.card-stats .icon-big i {
+  line-height: 59px;
+  font-size: 100px;
+  color: #7e43b4;
+}
+
+.card-stats .icon-big1 i {
+  line-height: 59px;
+  font-size: 100px;
+  color: #1c59ad;
+}
+
+.card-stats .icon-big2 i {
+  line-height: 59px;
+  font-size: 100px;
+  color: #1c3c68;
+}
+.card-stats .icon-big3 i {
+  line-height: 59px;
+  font-size: 100px;
+  color:#7e43b4;
+}
+
+.nc-icon {
+  display: inline-block;
+  font: normal normal normal 14px/1 nucleo-icons;
+  font-size: inherit;
+  speak: none;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card-stats .card-body .numbers {
+  text-align: right;
+  font-size: 2em;
+}
+
+.card-stats .card-body .numbers .card-category {
+  color: #9a9a9a;
+  font-size: 18px;
+  line-height: 1.4em;
+}
+
+.card-stats .card-body .numbers p {
+  margin-bottom: 0;
+}
+
+.card .card-footer {
+  background-color: transparent;
+  border: 0;
+  padding: 0 15px 15px;
+}
+
+.card-stats .card-footer .stats {
+  color: #0c0a0a;
+}
+
+.card .card-footer .stats i {
+  margin-right: 0px;
+  position: relative;
+  top: 0;
+  color: #473e3e;
+}
+
+
+
+.example-main-card {
+  margin-left: 25%;
+  -webkit-box-shadow: 1px 0px 14px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 0px 14px 0px rgba(0,0,0,0.75);
+  box-shadow: 1px 0px 14px 0px rgba(0,0,0,0.75);
+}
+
+
+/* Responsive Style */
+@media only screen and (max-width: 600px) {
+  .example-main-card {
+    margin-left: 0%;
+  }
+}

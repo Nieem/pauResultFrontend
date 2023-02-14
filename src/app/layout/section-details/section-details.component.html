@@ -1,0 +1,123 @@
+
+<div class="col-sm-12">
+    
+    <div id="header">    
+        <ul id="menu">
+          <li><a href="/"><span>Section Details</span></a></li>
+          <!-- <li><a href="/"><span>Tutorials</span></a></li>
+          <li><a href="/"><span>Articles</span></a></li>
+          <li><a href="/"><span>About me</span></a></li>
+          <li><a href="/"><span>Contact</span></a></li> -->
+        </ul>
+      </div>
+       
+    <!-- <h2 style="margin-left: 450px">Section Details</h2> -->
+    <p>
+        <button type="button" class="col-md-1 btn btn-link" (click)="rerender()">
+            <i class="material-icons pull-left">
+                autorenew
+                </i>Refresh
+        </button>
+     
+        <button type="button" class="col-md-1 btn btn-link pull-right" (click)="back()">
+          <i class="material-icons pull-left">
+            keyboard_backspace
+            </i> Back
+        </button>
+      
+        <!-- <a [routerLink]="['/layout/sections']" [routerLinkActive]="['router-link-active']">
+          <i class="material-icons pull-right">
+            keyboard_backspace
+            </i> Back
+        </a> -->
+      </p>
+     
+   </div>
+
+   <form>
+   
+   
+
+
+
+<table  *ngIf="dataexist==1" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover" style="padding: 2%">
+  <thead>
+    <tr>
+      <th>SL</th>
+      <th>Student ID</th>
+      <th>Name</th>
+      <th>ATT(5%)</th>
+      <th>CT(25%)</th>
+      <th>Mid(20%)</th>
+      <th>Final(50%)</th>
+      <th>Total</th>
+      <th>GP</th>
+      <!-- <th>Letter Grade</th> 
+      <th>Confirm Grade</th> -->
+      <th>Grade</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of sectionDetailsList;let i=index">
+      <td>{{i+1}}</td>
+      <td>{{ student.StudentID }}</td>
+      <!-- <td>{{ person.StudentName }}</td> -->
+      <td contenteditable='true' (click)="onRowClick(person)">{{ student.StudentName }}</td>
+      <td>
+          <span *ngIf="finaleEditValue != student">{{student.Attendance}}</span>
+          <input *ngIf="finaleEditValue == student"  type="number"  min="0" max="5" class="form-control"  [(ngModel)]="student.Attendance" name="Attendance" #Attendance=ngModel />
+      </td>
+      <td>
+          <span *ngIf="finaleEditValue != student">{{student.ClassTest}}</span>
+          <input *ngIf="finaleEditValue == student"  type="number" min="0" max="25"  class="form-control"  [(ngModel)]="student.ClassTest" name="ClassTest" #ClassTest=ngModel />
+      </td>
+      <td>
+        <span *ngIf="midEditValue != student">{{student.Midterm}}</span>
+        <input *ngIf="midEditValue== student"  type="number" min="0" max="20"  class="form-control"  [(ngModel)]="student.Midterm" name="Midterm" #Midterm=ngModel />
+      </td>
+      <td>
+          <span *ngIf="finaleEditValue != student">{{student.FinalTerm}}</span>
+          <input *ngIf="finaleEditValue == student"  type="number" min="0" max="50"  class="form-control"   [(ngModel)]="student.FinalTerm" name="FinalTerm" #FinalTerm=ngModel />
+     </td>
+      <td>{{student.TotalMark}}</td>
+      <td>{{student.Grade}}</td>
+      <td>{{student.LetterGrade}}</td>
+     
+ 
+      <td style="width: 20%;"> <!-- student.HighLight==true for final      && (student.ExpireDateTime>=jstoday)-->
+         <button *ngIf="(button!==student) &&
+          (( student.SemesterMidTerm == true &&  student.HighLight==true  && student.ConfirmSubmitByFaculty==false && (student.ExpireDateTime>=jstoday))
+          || (student.SpecialMarkSubmit==true)
+          ||(student.SemesterFinalTerm==true && student.SpecialGradeuploadDeadLine>=jstoday
+          ))" 
+          class="btn btn-info" (click)="onSelectEdit(student)">Edit</button>
+        <button *ngIf="btnupdate===student" class="btn btn-info" (click)="onSelectUpdate(student)">Update</button>
+        <button *ngIf="btnupdate===student" class="btn btn-info" (click)="onSelectCancel(student)">Cancel</button>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    Powered by ums
+  </tfoot>
+  </table>
+<br/>
+
+<div *ngFor="let student of sectionDetailsList | slice:1:2"> 
+    <!-- (student.HighLight==true && student.ConfirmSubmitByFaculty==false && student.ExpireDateTime>=jstoday)||(student.FinalTerm==true && student.SpecialGradeuploadDeadLine>=jstoday) -->
+      <button class="btn btn-danger col-sm-2 offset-sm-9"  (click)="onFinalSubmit(sectionDetailsList)"
+       *ngIf="(( student.SemesterMidTerm == true &&  student.HighLight==true  
+          && student.ConfirmSubmitByFaculty==false && (student.ExpireDateTime>=jstoday))
+          || (student.SpecialMarkSubmit==true)
+          ||(student.SemesterFinalTerm==true && student.SpecialGradeuploadDeadLine>=jstoday
+          ))">
+        Submit
+      </button> 
+    
+  
+   
+</div>
+
+
+
+  

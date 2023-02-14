@@ -1,0 +1,19 @@
+input:checked + label {
+    color: red;
+  }
+  
+  
+  input[type="checkbox"] {
+    box-shadow: 0 0 0 3px rgb(209, 5, 5);
+   // background:url("/src/assets/images/cross.png");
+  // background:url("https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png") no-repeat;
+   // background-image: linear-gradient(135deg, rgb(218, 8, 25) 0%, rgb(236, 11, 11) 100%);
+  }
+  
+  /* Checkbox element, when checked */
+  input[type="checkbox"]:checked {
+    box-shadow: 0 0 0 3px rgb(8, 4, 231);
+    //background:url("http://contentservice.mc.reyrey.net/image_v1.0.0/2267461") no-repeat;
+  }
+
+  

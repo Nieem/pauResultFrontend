@@ -1,0 +1,19 @@
+{
+    "editor.wordWrap": "off",
+    "files.exclude": {
+			
+			"typings": {},
+			"**/*.map": {},
+			"**/*.js": {
+				"when": "$(basename).ts"
+			}
+	},
+	
+	"eslint.enable":false,
+
+	 "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+}

@@ -1,0 +1,105 @@
+ <div class="col-sm-12">
+    <div id="header">    
+        <ul id="menu">
+          <li><a href="/"><span>Sections</span></a></li>
+          <!-- <li><a href="/"><span>Tutorials</span></a></li>
+          <li><a href="/"><span>Articles</span></a></li>
+          <li><a href="/"><span>About me</span></a></li>
+          <li><a href="/"><span>Contact</span></a></li> -->
+        </ul>
+      </div>
+
+</div>
+
+<!-- <div class="col-md-3 offset-md-3">
+  <label>Select Semester:&nbsp;&nbsp; </label>
+  <select (change)="getSection($event.target.value)">
+      <option value="0">--All--</option>
+      <option *ngFor="let semester of semesters" value={{semester.SemesterID}}>
+          {{semester.SemesterName}}
+      </option>
+  </select>
+</div> -->
+   <br/> <br/>
+<div class="col-md-6 offset-md-5">
+<mat-form-field>
+  <mat-select (selectionChange)="getSection($event.value)"  [(value)]="selected1">
+    
+    <mat-option *ngFor="let semester of this.studentService.semesters" value={{semester.SemesterID}}>
+      {{semester.SemesterName}}</mat-option>
+      
+  </mat-select>
+</mat-form-field>
+</div>
+
+<table id="example" class="table table-striped datatable table-bordered ">  
+     <!-- table table-sm table-hover -->
+
+     <thead>
+            <tr>
+                <th>Section Code</th>
+                <th>Section Name</th>
+                <th>Course Code</th>
+                <th>Course Title</th>
+                <th>Semester Name</th>
+                <th>Total Student Enrolled</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+  <tbody>
+    <tr *ngFor="let student of studentService.sectionList">
+      <td>{{student.SectionCode}}</td>
+      <td>{{student.SectionName}}</td>
+      <!-- <td> 
+        <span *ngIf="DropdownVar !== student">{{student.year}}</span>  
+        <select *ngIf="DropdownVar === student" id="inputState" class="form-control"  [(ngModel)]="studentService.selectedStudent.year" name="year" #year="ngModel">
+            <option [value]="2016">2016</option>
+          <option [value]="2017">2017</option>
+          <option [value]="2018">1018</option>
+          <option [value]="2019">2019</option>
+        </select>
+
+      </td> -->
+      <td>{{student.CourseCode}}</td>
+      <td>{{student.CourseTitle}}</td>
+      <td>{{student.SemesterName}}</td>
+      <td>{{student.TotalStudentEnrolled}}</td>
+      <td> 
+        <button  class="btn btn-info" (click)="sectionDetails(student)">Details</button>
+            <!-- <a [routerLink]="['/layout/sectiondetails',student.SectionCode,student.TotalStudentEnrolled,student.SemesterName,student.CourseCode,student.CourseTitle]" skipLocationChange [routerLinkActive]="['router-link-active']" class="btn btn-info">
+                <i class="fa fa-fw fa-edit"></i>Details
+            </a> -->
+            <!-- <a [routerLink]="['/layout/sectiondetails',{SectionCode: student.SectionCode,SectionCode:student.SectionCode,TotalStudentEnrolled:student.TotalStudentEnrolled,SemesterName:student.SemesterName,CourseCode:student.CourseCode,CourseTitle:student.CourseTitle}]" skipLocationChange:true [routerLinkActive]="['router-link-active']" class="btn btn-info">
+              <i class="fa fa-fw fa-edit"></i>Details
+            </a> -->
+            <!-- <button *ngIf="button!==student" class="btn btn-info" (click)="onSelect(student)">Edit</button>
+            <button *ngIf="btnupdate===student" class="btn btn-info" (click)="onSelectUpdate(student)">Update</button>
+            <button *ngIf="btnupdate===student" class="btn btn-info" (click)="onSelectUpdate1(2)">Cancel</button> -->
+        <!-- <a class="btn text-danger" (click)="onDelete(student.std_ID)">
+          <i class="material-icons">
+            remove_circle
+            </i>
+         </a>  -->
+      </td>
+     </tr>
+  </tbody>
+
+
+  <tfoot>
+        <tr>
+          <th>Section Code</th>
+          <th>Section Name</th>
+          <th>Course Code</th>
+          <th>Course Title</th>
+          <th>Semester Name</th>
+          <th>Total Student Enrolled</th>
+          <th>Actions</th>
+
+            
+        </tr>
+    </tfoot>
+  </table>
+
+
+
+  <!--   -->
